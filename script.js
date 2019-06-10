@@ -16,7 +16,17 @@ const render = (books) => {
           <h2>${book.volumeInfo.title}</h2>
           <p>${book.volumeInfo.authors}</p>
           <p>${book.searchInfo.textSnippet}</p>
-        `;
+          <p>${book.volumeInfo.categories}</p>`;
+    if (book.saleInfo.buyLink) {
+      el.innerHTML += `
+      <button>Buy now</button>
+      `
+      const buyButton = el.querySelector('button');
+      buyButton.onclick = () => {
+        location.href = book.saleInfo.buyLink;
+      }
+    }
+
     document.body.appendChild(el)
   });
 

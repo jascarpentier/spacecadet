@@ -5,18 +5,22 @@ const button = document.querySelector('button');
 const list = document.querySelector('list');
 const collectionName = document.querySelector('collectionName');
 const bookList = document.querySelector('bookList');
+const buyBooks = document.querySelector('.buyBooks');
 
 
 const render = (books) => {
   books.forEach(book => {
     const el = document.createElement('div');
+    el.classList.add('bookDiv');
     console.log(el)
 
     el.innerHTML = `
           <h2>${book.volumeInfo.title}</h2>
+          <img src=${book.volumeInfo.imageLinks.thumbnail}>
           <p>${book.volumeInfo.authors}</p>
           <p>${book.searchInfo.textSnippet}</p>
           <p>${book.volumeInfo.categories}</p>`;
+
     if (book.saleInfo.buyLink) {
       el.innerHTML += `
       <button>Buy now</button>
@@ -27,7 +31,7 @@ const render = (books) => {
       }
     }
 
-    document.body.appendChild(el)
+    buyBooks.appendChild(el)
   });
 
 }

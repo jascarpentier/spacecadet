@@ -1,13 +1,11 @@
 const DOMAIN = 'https://www.googleapis.com/books/v1/volumes?q=search+terms';
-const API_KEY = 'AIzaSyCMRkIUhX9QITmY8RIsacHdHSCB_DM_jLA';
 const BASE_URL = `${DOMAIN}?apikey=${API_KEY}&`;
 const button = document.querySelector('button');
 const list = document.querySelector('list');
 const collectionName = document.querySelector('collectionName');
 const bookList = document.querySelector('bookList');
 const buyBooks = document.querySelector('.buyBooks');
-
-
+console.log(BASE_URL)
 const render = (books) => {
   books.forEach(book => {
     const el = document.createElement('div');
@@ -35,9 +33,6 @@ const render = (books) => {
   });
 
 }
-
-
-
 
 button.addEventListener('click', async () => {
   const searchTerms = document.querySelector('input').value;

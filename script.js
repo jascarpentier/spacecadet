@@ -5,7 +5,7 @@ const list = document.querySelector('list');
 const collectionName = document.querySelector('collectionName');
 const bookList = document.querySelector('bookList');
 const buyBooks = document.querySelector('.buyBooks');
-console.log(BASE_URL)
+
 const render = (books) => {
   books.forEach(book => {
     const el = document.createElement('div');

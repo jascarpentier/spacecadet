@@ -24,4 +24,11 @@ It will also included two blog articles on the page.
 
 Will inlcude a contact us for where users can submit lists of books, or a book that they can't find. 
 
-Footer section will include social media followus icons, FAQ, terms of use, etc ... 
+Footer section will include a CTA to call and email.
+
+#### What I would like to eventually add
+
+Since trying to fix the issue with the Google Book API being down, I unfortunately didn't get the time to do the extra things that I wanted to do. 
+
+- I wanted to add a video in the header with iFrames and then let it be replaced by a photo when it went to mobile 
+- I also wanted to add a second API with auotcomplete in the searchbar
